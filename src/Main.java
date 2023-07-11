@@ -41,6 +41,7 @@ class ATMMachine {
                     System.out.println("Enter the amount to be deposited : ");
                     amount = scan.nextInt();
                     Money += amount;
+                    val.setBalance(Money);
                     System.out.println("Current balance is : " + Money);
                     break;
                 }
@@ -65,6 +66,7 @@ class ATMMachine {
                     }
                     if (amount < Money) {
                         Money -= amount;
+                        val.setBalance(Money);
                         System.out.println("After Withdrawal your current balance is : " + Money);
                         break;
                     }
